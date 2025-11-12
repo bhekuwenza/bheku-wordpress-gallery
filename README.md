@@ -1,10 +1,8 @@
-media_gallery
-===============
+# Bheku Wordpress Gallery
 
-Media Gallery metabox for WordPress.
+Gallery Metabox for WordPress.
 
-Usage
------
+## Usage
 
 In your template inside a loop, grab the IDs of all the images with the following:
 
@@ -12,7 +10,7 @@ In your template inside a loop, grab the IDs of all the images with the followin
 $gallery_attachments = get_post_meta($post->ID, 'media_gallery', true);
 ```
 
-Then you can loop through the IDs and call `wp_get_attachment_link` or `wp_get_attachment_image` to display the images with or without a link respectively:
+Example with loop:
 
 ```php
 $gallery_attachments = get_post_meta($post->ID, 'media_gallery', true);
