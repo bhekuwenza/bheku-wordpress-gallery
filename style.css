@@ -1,0 +1,233 @@
+/* gallery-metabox */
+.gallery-metabox,
+.gallery-metabox * {
+  box-sizing: border-box;
+}
+
+.gallery-metabox-wrap {
+  margin-top: 0.5em;
+  width: 100%;
+  clear: both;
+}
+
+.gallery-metabox-header {
+}
+
+.gallery-metabox-header ul {
+  padding-left: 0.5rem;
+}
+
+.gallery-metabox-list-wrap {
+  position: relative;
+}
+
+#gallery-metabox-list {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  overflow: auto;
+  height: 450px;
+  border: 1px solid lightgray;
+  background-color: #fff;
+  padding: 10px;
+  padding-bottom: 5px;
+}
+
+#gallery-metabox-list li:not(.gallery-metabox-placeholder) {
+  cursor: move;
+  flex: 0 1 50%;
+  max-width: 150px;
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin: 0px 5px 5px 0;
+}
+
+#gallery-metabox-list li .image-location {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+#gallery-metabox-list li footer {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min-content;
+  gap: 5px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#gallery-metabox-list li footer > a {
+  display: flex;
+  padding: 0;
+}
+
+#gallery-metabox-list li footer > a.edit-image {
+  line-height: 24px;
+  min-height: 24px;
+  border-radius: 3px;
+  padding: 0 5px;
+}
+
+#gallery-metabox-list li footer > a.remove-image {
+  color: #ff6363;
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+  border: 1px solid #ffcbcb;
+  background-color: #fff3f3;
+}
+
+#gallery-metabox-list li footer > a.remove-image svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: auto;
+}
+
+#gallery-metabox-list li img {
+  width: 100%;
+  height: auto;
+}
+
+#gallery-metabox-list .gallery-metabox-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.gallery-metabox-attachment-edit {
+  display: flex;
+  justify-content: flex-end;
+
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  z-index: 10;
+
+  width: auto;
+  height: auto;
+  background: rgba(255, 255, 255, 0.42);
+  overflow: hidden;
+}
+
+.gallery-metabox-attachment-edit:not(.active) {
+  display: none;
+  z-index: -1;
+}
+
+.gallery-metabox-attachment-edit.active .gallery-metabox-attachment-wrap {
+  transform: translateX(0%);
+}
+
+#gallery_attachment_location {
+  max-width: none;
+}
+
+.gallery-metabox-attachment-wrap {
+  overflow-y: auto;
+  width: 75%;
+  height: 100%;
+  max-width: 320px;
+  background: #fff;
+  border-left: 1px solid lightgray;
+  box-shadow: -15px 0px 10px rgba(0, 0, 0, 0.075);
+  border-radius: 3px 0 0 3px;
+  padding: 0;
+  margin-left: auto;
+
+  transform: translateX(100%);
+  transition: transform ease 0.2s;
+}
+.gallery-metabox-attachment-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid lightgray;
+  padding: 10px;
+}
+
+.gallery-metabox-attachment-body {
+  padding: 10px;
+}
+
+.gallery-metabox-attachment-body .spinner {
+  display: block;
+  float: none;
+  margin: 0 auto;
+}
+
+.gallery-metabox-attachment-footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: #fff;
+  border-top: 1px solid lightgray;
+  padding: 10px;
+}
+
+.gallery-metabox-attachment-footer > * {
+  margin-right: 5px;
+}
+
+.gallery-metabox-attachment-title {
+  font-size: 120%;
+  font-weight: 600;
+}
+
+.close-modal {
+  display: flex;
+  padding: 0;
+
+  color: #ff6363;
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+  border: 1px solid #ffcbcb;
+  background-color: #fff3f3;
+}
+
+.close-modal svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: auto;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-field input[type="text"],
+.form-field textarea {
+  width: 100%;
+  padding: 2px 10px;
+}
+
+.form-field textarea {
+  min-height: 80px;
+}
